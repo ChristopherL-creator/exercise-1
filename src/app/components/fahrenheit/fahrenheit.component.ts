@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConversionService } from 'src/app/services/conversion.service';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-fahrenheit',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fahrenheit.component.scss']
 })
 export class FahrenheitComponent implements OnInit {
+
+  value: number = 0;
 
   constructor() { }
 
