@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ConversionService } from './conversion.service';
+import { ConverterService } from './converter.service';
 
-describe('ConversionService', () => {
-  let service: ConversionService;
+describe('ConverterService', () => {
+  let service: ConverterService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ConversionService);
+    service = TestBed.inject(ConverterService);
   });
 
   it('should be created', () => {

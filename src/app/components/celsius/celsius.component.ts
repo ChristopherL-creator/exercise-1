@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ConverterService } from 'src/app/services/converter.service';
-import { __values } from 'tslib';
 
 @Component({
-  selector: 'app-fahrenheit',
-  templateUrl: './fahrenheit.component.html',
-  styleUrls: ['./fahrenheit.component.scss']
+  selector: 'app-celsius',
+  templateUrl: './celsius.component.html',
+  styleUrls: ['./celsius.component.scss']
 })
-export class FahrenheitComponent implements OnInit {
+export class CelsiusComponent implements OnInit { 
 
-//  devo dichiarare variabili prima di constructor
+  //  devo dichiarare variabili prima di constructor
   value: number = 0;
 
 // importo service a variabili
   constructor( private conServ: ConverterService ) { 
-    conServ.fahreneitValue().subscribe({  
+    conServ.value.subscribe({  
       //  con subscribe, si registra ad ogni cambiamento di value
       next: v => this.value = v, 
       // quando arriva value cambiata da service, l'assegno a value in component
@@ -26,7 +25,7 @@ export class FahrenheitComponent implements OnInit {
   } 
 
   valueChanged(): void { 
-    this.conServ.nextFahreneit(this.value);
+    this.conServ.value.next(this.value);
 //  value è cambiato, lo infiliamo in consservice, che cpmunica ad altri componenti
   }
 
