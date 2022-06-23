@@ -1,7 +1,7 @@
 <div> 
     <h2>Fahreneit</h2>
     <div> 
-        <input type="number" [(ngModel)]="value" (ngModelChange)="valueChanged()"> 
-        <span> °F</span> 
+        <!-- <input type="number" [(ngModel)]="value" (ngModelChange)="valueChanged()">  -->
+        <span>{{conServ.fahreneitValue() | async}} °F</span> 
     </div> 
 </div>

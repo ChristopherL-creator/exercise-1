@@ -16,7 +16,7 @@ export class CelsiusComponent implements OnInit {
     conServ.value.subscribe({  
       //  con subscribe, si registra ad ogni cambiamento di value
       next: v => this.value = v, 
-      // quando arriva value cambiata da service, l'assegno a value in component
+      // quando arriva value cambiata da service(v), l'assegno a value in component
       error: err => console.log(err)
     })
   }
